@@ -1,0 +1,9 @@
+<div class="log-form">
+  <h2>Login to your account</h2>
+  <form>
+    <input type="text" [(ngModel)]="userObj.userName"  name="userName" placeholder="username" />
+    <input type="password" [(ngModel)]="userObj.password" name="password" placeholder="password" />
+    <button type="submit" class="btn text-center" (click)="login()">Login</button>
+    <!-- <a class="forgot" href="#">Forgot Username?</a> -->
+  </form>
+</div>

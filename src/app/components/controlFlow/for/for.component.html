@@ -1,0 +1,109 @@
+<div class="row bg-secondary my-3 p-2">
+    <div class="col-12 text-white">
+        <h3>Control Flow Statements</h3>
+        <span><span>&#64;</span>for, <span>&#64;</span>Switch Case </span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            @for(cityItem of cityArray; track $index){
+            <li>{{cityItem}}</li>
+            }
+
+        </ul>
+    </div>
+    <div class="col-3">
+
+        @for(cityItem of cityArray; track $index){
+        <div> {{cityItem}}</div>
+        }
+        </div>
+        <div class="col-3">
+            <select>
+                @for(cityItem of cityArray; track $index){
+                <option>{{cityItem}}</option>
+                }
+            </select>
+        </div>
+        <div class="col-3">
+            <select>
+                @for (stud of studentList; track $index){
+                <option value="stud.id">{{stud.Name}}</option>
+                }
+            </select>
+        </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Occupation</th>
+                            <th>Gender</th>
+                            <th>IsActive</th>
+        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (stud of studentList; track $index){
+                        <tr>
+                            <td>{{stud.id}}</td>
+                            <td>{{stud.Name}}</td>
+                            <td>{{stud.City}}</td>
+                            <td>{{stud.Occupation}}</td>
+                            <td>{{stud.Gender}}</td>
+                            <td>{{stud.isActive? 'Active' :
+                                'De-Active'}}</td>
+                        </tr>
+        
+                        }
+        
+        
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h3>Switch Case</h3>
+        <div class="row">
+            <div class="col-3">
+                <input type="text" [(ngModel)]="dayNumber">
+            </div>
+            <div class="col-3">
+                @switch (dayNumber){
+                @case ('1'){
+                <span>Monday</span>
+                }
+                @case ('2'){
+                <span>Tuesday</span>
+                }
+                @case ('3'){
+                <span>Wednesday</span>
+                }
+                @case ('4'){
+                <span>Thursday</span>
+                }
+                @case ('5'){
+                <span>Friday</span>
+                }
+                @case ('6'){
+                <span>Saturday</span>
+                }
+                @case ('7'){
+                <span>Sunday</span>
+                }
+                @default{
+                <span>Wrond Entry</span>
+                }
+                }
+    </div>
+
+</div>
+

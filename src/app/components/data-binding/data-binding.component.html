@@ -1,0 +1,65 @@
+<div class="row mt-4">
+    <div class="col-12">
+        <h3>One Way Data Binding</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h5>1. Interpolation</h5>
+        <h2 class="mb-2">{{ coureseName}}</h2>
+        <div class="mb-2"> {{ RollNumber}} </div>
+        <input type="text" class="mb-2" value={{coureseName}} placeholder="Enter the value" />
+        <input class="m-3" type="{{inputType}}">
+    </div>
+    <div class="col-12 mt-3">
+        <h5>2. Property biding</h5>
+        <h2 [class]="myClassName" class="text-white mb-2 p-1">binding</h2>
+        <input class="m-3" [type]="inputType">
+        <input class="mb-2" type="text" [value]="coureseName">
+    </div>
+    
+   <div class="col-12 mt-3">
+    <h5>3. Event biding</h5>
+        <button class="btn btn-primary mt-3 mb-2" (click)="showAlert('Welcome to Angular 18')">
+            Show Message
+        </button>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h3>Two Way Data Binding</h3>
+    </div>
+</div>
+
+
+<div class="row mt-3">
+    <div class="col-12">
+        <input type="text" [(ngModel)]="coureseName" class="m-3"> {{coureseName}}
+        <input type="checkbox" [(ngModel)]="isIndian" class="m-3">
+
+        <select [(ngModel)]="isStateChange">
+            <option value="UP">UP</option>
+            <option value="UK">UK</option>
+            <option value="MP">MP</option>
+            <option value="Goa">Goa</option>
+            <option value="Bihar">Bihar</option>
+        </select>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h3>Signal Data Binding</h3>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-12">
+        <h5>{{ name() }}</h5>
+    </div>
+</div>
