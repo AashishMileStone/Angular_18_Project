@@ -1,0 +1,10 @@
+<!-- <h2>Parent Component</h2> -->
+<!-- <app-child [childData]="parentData"></app-child>
+  -->
+
+
+<app-child [name]="userName" 
+  [userAge]="age" (datafromchild)="receivedData($event)"></app-child>
+
+<p>{{ messageFromChild }}</p>
+
