@@ -1,10 +1,10 @@
 import { Component, Input, EventEmitter, Output} from '@angular/core';
-import { NgIf } from '@angular/common';
+// import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-child',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
@@ -14,7 +14,7 @@ export class ChildComponent {
   @Input() userAge!: number; 
 
   @Output() datafromchild = new EventEmitter<string>();
-  
+
   isLoggedIn: any;
 
   sendDataToParent() {
