@@ -45,5 +45,6 @@ export class AttributeDirectiveComponent {
     {id: 5, TotalMakrs : 69, Gender : 'Male', Name: 'Sunil', City: 'Rishikesh',  Occupation: 'Sr. frontEnd Developer', isActive: false},
     
   ]
+  
 
 }

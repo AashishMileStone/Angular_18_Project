@@ -19,21 +19,28 @@ export class GetApiComponent {
 
   customerList: Customer [] = [];
 
-  // constructor( private http : HttpClient){
-  //  this.getAllUser();
+  users: any[] = [];
+
+  constructor( private deptSrv : DepartmentService ){}
+
+    ngOnInit(): void {
+    this.deptSrv.getUsers().subscribe({
+      next: (data) => {
+        this.users = data;
+      },
+      error: (err) => {
+        console.error('API Error:', err);
+      }
+    });
+  }
+
+  // getAllUser(){
+  //   debugger
+  //  this.deptSrv.getAllDept().subscribe((res:any)=>{
+  //   debugger
+  //   this.userList  = res;
+  //  })
   // }
-
-  constructor( private deptSrv : DepartmentService ){
-    
-  }
-
-  getAllUser(){
-    debugger
-   this.deptSrv.getAllDept().subscribe((res:any)=>{
-    debugger
-    this.userList  = res;
-   })
-  }
 
 
 

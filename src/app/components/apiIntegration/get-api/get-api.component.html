@@ -1,5 +1,33 @@
 <app-alert [alertType]="'Success'" [message]="'Welcome To Get Page'"></app-alert>
-<div class="row">
+
+<h2>User List</h2>
+
+<table border="1" cellpadding="8" class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>UserName</th>
+    <th>Email</th>
+    <th>Street</th>
+    <th>Zipcode</th>
+    <th>City</th>
+    <th>Geo Lng</th>
+  </tr>
+
+  @for (user of users; track user.id) {
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address.street }}</td>
+      <td>{{ user.address.zipcode }}</td>
+      <td>{{ user.address.city }}</td>
+      <td>{{ user.address.geo.lng }}</td>
+    </tr>
+  }
+</table>
+<!-- <div class="row">
     <div class="col-2 my-3">
         <button class="btn btn-success" (click)="getAllUser()">Get User List</button>
     </div>
@@ -14,7 +42,7 @@
       
     </div>
 
-</div>
+</div> -->
 
 <!-- <div class="row">
     <div class="col-2 my-3">

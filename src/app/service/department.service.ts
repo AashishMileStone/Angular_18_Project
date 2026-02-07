@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 // import { Constant } from '../constant/Constant';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { MasterService } from './master/master.service';
@@ -18,14 +19,15 @@ export class DepartmentService {
   
   constructor(private http : HttpClient, _master: MasterService) { }
 
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
-
-
-
-  getAllDept(){
-    debugger
-    return this.http.get("https://jsonplaceholder.typicode.com/users");
+  getUsers(): Observable<any> {
+    return this.http.get(this.apiUrl);
   }
+
+  // getAllDept(){
+  //   return this.http.get("https://jsonplaceholder.typicode.com/users");
+  // }
 
   // getAllDept():Observable<Department[]> {
   //   debugger;
@@ -36,8 +38,8 @@ export class DepartmentService {
   //   return this.master.post(`${Constant.API_URL}${Constant.DEPARTMENT_METHODS.ADD_NEW_DEPT}`, obj)
   // }
 
-  addTwoNo(num1: number, num2: number) {
-    debugger; 
-    return num1 +  num2;
-  }
+  // addTwoNo(num1: number, num2: number) {
+
+  //   return num1 +  num2;
+  // }
 }

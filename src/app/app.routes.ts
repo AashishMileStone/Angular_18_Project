@@ -18,6 +18,8 @@ import { ViewchildComponent } from './components/decorator/view-child/view-child
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './service/auth.guard';
 import { SignalComponent } from './components/signal/signal.component';
+import { ParentComponent } from './components/decorator/parent/parent.component';
+import { ChildComponent } from './components/decorator/child/child.component';
 
 
 export const routes: Routes = [
@@ -49,7 +51,7 @@ export const routes: Routes = [
         canActivate: [authGuard]
     },
     {
-        path: 'emp-list',
+        path: 'employee-list',
         component: EmployeeListComponent,
         canActivate: [authGuard]
     },
@@ -116,6 +118,14 @@ export const routes: Routes = [
     {
         path: 'viewChild',
         component: ViewchildComponent
+    },
+     {
+        path: 'parent',
+        component: ParentComponent
+    },
+     {
+        path: 'child',
+        component: ChildComponent
     },
         ]
 
