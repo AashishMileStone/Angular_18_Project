@@ -24,12 +24,12 @@ export class LayoutComponent {
   }
 
   logoff() {
-    localStorage.removeItem('loginUser');
+    sessionStorage.removeItem('loginUser');
     this.router.navigateByUrl('login')
   }
-   
+
+
   onRoleChnage(role: string) {
-    debugger;
     this.deptService.onRoleChange$.next(role)
     this.deptService.role$.next(role)
   }

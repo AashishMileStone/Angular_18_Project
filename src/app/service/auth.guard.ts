@@ -4,7 +4,8 @@ import { environment } from '../../environments/environment';
 
 export const authGuard: CanActivateFn = (route, state) => {
 
-  const router = inject(Router);
+
+   const router = inject(Router);
   const loggedData = localStorage.getItem('loginUser');
     if(loggedData != null) {
       return true;
@@ -14,5 +15,4 @@ export const authGuard: CanActivateFn = (route, state) => {
       return false;
     }
 
-  // return true;
 };

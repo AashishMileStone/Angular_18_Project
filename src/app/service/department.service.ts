@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-// import { Constant } from '../constant/Constant';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { MasterService } from './master/master.service';
-import { Department } from '../components/model/class';
-import { environment } from '../../environments/environment';
+// import { Department } from '../components/model/class';
+// import { environment } from '../../environments/environment';
+// import { Constant } from '../constant/Constant';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class DepartmentService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
   getUsers(): Observable<any> {
+    console.log('API called');
     return this.http.get(this.apiUrl);
   }
 

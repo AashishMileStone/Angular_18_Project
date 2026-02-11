@@ -24,12 +24,18 @@ export class LoginComponent {
     if (this.userObj.userName == "admin" && this.userObj.password == "12345") {
       alert("User login successfully");
       localStorage.setItem('loginUser', this.userObj.userName);
-      this.router.navigateByUrl('pipe')
+      // sessionStorage.setItem('loginUser', this.userObj.userName);
+      this.router.navigateByUrl('data-binding')
     }
     else {
       alert('Wrong Credentials')
     }
   }
+
+
+
+
+
   
 
   //     debugger;

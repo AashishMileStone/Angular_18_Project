@@ -20,6 +20,7 @@ import { authGuard } from './service/auth.guard';
 import { SignalComponent } from './components/signal/signal.component';
 import { ParentComponent } from './components/decorator/parent/parent.component';
 import { ChildComponent } from './components/decorator/child/child.component';
+import { UsercurdComponent } from './components/apiIntegration/usercurd/usercurd.component';
 
 
 export const routes: Routes = [
@@ -113,6 +114,11 @@ export const routes: Routes = [
     {
         path: 'post-api',
         component: PostApiComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path: 'usercurd',
+        component: UsercurdComponent,
         canActivate: [authGuard]
     },
     {

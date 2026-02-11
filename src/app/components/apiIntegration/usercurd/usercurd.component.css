@@ -1,0 +1,8 @@
+.action-column{
+    width:130px;
+    max-width: 130px;
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: 1px var(--bs-border-width) !important;
+}
