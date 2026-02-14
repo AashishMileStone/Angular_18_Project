@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
+
 export class LoginComponent {
 
-  userObj : any = {
+  userObj: any = {
     userName: '',
     password: ''
   }
@@ -21,22 +22,24 @@ export class LoginComponent {
   http = inject(HttpClient)
 
   login() {
-    if (this.userObj.userName == "admin" && this.userObj.password == "12345") {
+    if (this.userObj.userName === "admin" && this.userObj.password === "admin@2025") {
       alert("User login successfully");
+
+      // Store in localStorage so all tabs see it
       localStorage.setItem('loginUser', this.userObj.userName);
-      // sessionStorage.setItem('loginUser', this.userObj.userName);
-      this.router.navigateByUrl('data-binding')
-    }
-    else {
-      alert('Wrong Credentials')
+
+      // Mark session active in this tab
+      sessionStorage.setItem('sessionActive', 'true');
+
+      // Navigate to previous page if exists, otherwise default
+      const redirectUrl = sessionStorage.getItem('redirectUrl') || '/data-binding';
+      sessionStorage.removeItem('redirectUrl');
+      this.router.navigateByUrl(redirectUrl);
+    } else {
+      alert('Wrong Credentials');
     }
   }
 
-
-
-
-
-  
 
   //     debugger;
   //   this.router.navigateByUrl('data-binding')
@@ -51,4 +54,4 @@ export class LoginComponent {
   //     }
   //   })
   // }
-  }
+}

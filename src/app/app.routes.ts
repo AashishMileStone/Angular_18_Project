@@ -36,6 +36,7 @@ export const routes: Routes = [
     {
         path: '',
         component: LayoutComponent,
+        canActivate: [authGuard],
         children: [
     {
         path : 'add-employee',

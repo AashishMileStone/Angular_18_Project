@@ -1,18 +1,16 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { environment } from '../../environments/environment';
 
-export const authGuard: CanActivateFn = (route, state) => {
+export const authGuard: CanActivateFn = () => {
+  const router = inject(Router);
 
+  const loginData = localStorage.getItem('loginUser');
 
-   const router = inject(Router);
-  const loggedData = localStorage.getItem('loginUser');
-    if(loggedData != null) {
-      return true;
-    }
-    else{
-      router.navigateByUrl('login')
-      return false;
-    }
+  // If localStorage has login info → allow access
+  if (loginData) {
+    return true;
+  }
 
+  // Otherwise redirect to login
+  return router.createUrlTree(['/login']);
 };
