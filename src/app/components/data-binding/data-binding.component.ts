@@ -12,7 +12,7 @@ export class DataBindingComponent {
 
   // sting, number, boolean, date
 
-  coureseName : string = "Angular 18";
+  coureseName : string = "Angular 19";
   inputType = "radio";
   RollNumber : number = 1;
   isIndian : boolean = true;

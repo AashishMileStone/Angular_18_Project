@@ -12,57 +12,46 @@ import { Router } from '@angular/router';
 })
 export class StructuralDirectiveComponent {
 
-  // Variable declares
+  div1HideShow: boolean = true;
+  div2Toggle: boolean = true;
+  num1: string = '';
+  num2: string = '';
+  isActive: boolean = true;
+  selectedState: string = "USA";
 
-  div1HideShow : boolean = true; 
-  div2Toggle : boolean = true;
-  num1 : string = '';
-  num2 : string = '';
-  isActive : boolean = true;
-  selectedState : string = "USA";
+  selectedOption: string = '';
 
-  constructor(private router : Router){
-
-  }
+  constructor(private router: Router) { }
 
 
-// Function create for *ngIf structural directive
-  showDiv1(){
+  // Function create for *ngIf structural directive
+
+  showDiv1() {
     this.div1HideShow = true;
   }
 
-  hideDiv1(){
+  hideDiv1() {
     this.div1HideShow = false;
   }
 
-  toggle(){
+  toggle() {
     this.div2Toggle = !this.div2Toggle;
-
-    // if(this.div2Toggle == true){
-    //   this.div2Toggle = false;
-    // }
-    // else{
-    //   this.div2Toggle = true;
-    // }
   }
 
   // Function create for *ngfor structural directive
 
-  cityArray : string[] = ['Haridwar', 'Muzaffarnagar', 'Roorkee', 'Noida', 'Meerut' ]
+  cityArray: string[] = ['Haridwar', 'Muzaffarnagar', 'Roorkee', 'Noida', 'Meerut']
 
-  studentList : any[] = [
-    {id: 1, Name: 'Ashish', City: 'Muzaffarnagar',  Occupation: 'Sr. UI Developer'},
-    {id: 2, Name: 'Nitin', City: 'Haridwar',  Occupation: 'Business'},
-    {id: 3, Name: 'Anuj', City: 'Muzaffarnagar',  Occupation: 'Engineer'},
-    {id: 4, Name: 'Nishnt', City: 'Roorkee',  Occupation: 'Sr. Software Engineer'},
-    {id: 5, Name: 'Sunil', City: 'Rishikesh',  Occupation: 'Sr. frontEnd Developer'},
-    
+  studentList: any[] = [
+    { id: 1, Name: 'Ashish', City: 'Muzaffarnagar', Occupation: 'Sr. UI Developer' },
+    { id: 2, Name: 'Nitin', City: 'Haridwar', Occupation: 'Business' },
+    { id: 3, Name: 'Anuj', City: 'Muzaffarnagar', Occupation: 'Engineer' },
+    { id: 4, Name: 'Nishnt', City: 'Roorkee', Occupation: 'Sr. Software Engineer' },
+    { id: 5, Name: 'Sunil', City: 'Rishikesh', Occupation: 'Sr. frontEnd Developer' },
+
   ]
 
-  navigateToAttribute(){
-  this.router.navigateByUrl('Attribute-dir')
+  navigateToAttribute() {
+    this.router.navigateByUrl('Attribute-dir')
   }
-
-
-
 }

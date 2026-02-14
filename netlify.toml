@@ -1,6 +1,6 @@
 [build]
 command = "ng build"
-publish = "dist/angular18-app/browser"
+publish = "dist/angular19-app/browser"
 
 [[redirects]]
 from = "/*"

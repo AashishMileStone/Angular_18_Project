@@ -21,6 +21,7 @@ import { SignalComponent } from './components/signal/signal.component';
 import { ParentComponent } from './components/decorator/parent/parent.component';
 import { ChildComponent } from './components/decorator/child/child.component';
 import { UsercurdComponent } from './components/apiIntegration/usercurd/usercurd.component';
+import { SwitchComponent } from './components/controlFlow/switch/switch.component';
 
 
 export const routes: Routes = [
@@ -87,6 +88,11 @@ export const routes: Routes = [
         component: ForComponent,
         canActivate: [authGuard]
     },
+      {
+        path: '@switch',
+        component: SwitchComponent,
+        canActivate: [authGuard]
+    },
     {
         path: 'pipe',
         component: PipeComponent,
@@ -118,7 +124,7 @@ export const routes: Routes = [
         canActivate: [authGuard]
     },
     {
-        path: 'usercurd',
+        path: 'User-crud',
         component: UsercurdComponent,
         canActivate: [authGuard]
     },

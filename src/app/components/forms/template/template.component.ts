@@ -1,12 +1,12 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-template',
   standalone: true,
-  imports: [FormsModule, JsonPipe, NgIf],
+  imports: [FormsModule, JsonPipe],
   templateUrl: './template.component.html',
   styleUrl: './template.component.css'
 })
@@ -24,8 +24,6 @@ export class TemplateComponent {
   }
 
   formValue:any;
-
-  selectedOption: string = '';
 
   onSubmit(){
    this.formValue = this.studentObj

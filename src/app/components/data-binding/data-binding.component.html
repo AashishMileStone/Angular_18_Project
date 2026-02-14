@@ -1,4 +1,4 @@
-<div class="row mt-4">
+<div class="row my-3">
     <div class="col-12">
         <h3>One Way Data Binding</h3>
     </div>
@@ -6,22 +6,22 @@
 
 <div class="row">
     <div class="col-12">
-        <h5>1. Interpolation</h5>
-        <h2 class="mb-2">{{ coureseName}}</h2>
+        <h4>1. Interpolation</h4>
+        <h5 class="mb-2">{{ coureseName}}</h5>
         <div class="mb-2"> {{ RollNumber}} </div>
         <input type="text" class="mb-2" value={{coureseName}} placeholder="Enter the value" />
         <input class="m-3" type="{{inputType}}">
     </div>
-    <div class="col-12 mt-3">
-        <h5>2. Property biding</h5>
-        <h2 [class]="myClassName" class="text-white mb-2 p-1">binding</h2>
+    <div class="col-12 my-3">
+        <h4>2. Property biding</h4>
+        <h5 [class]="myClassName" class="text-white mb-2 p-1">binding</h5>
         <input class="m-3" [type]="inputType">
         <input class="mb-2" type="text" [value]="coureseName">
     </div>
-    
-   <div class="col-12 mt-3">
-    <h5>3. Event biding</h5>
-        <button class="btn btn-primary mt-3 mb-2" (click)="showAlert('Welcome to Angular 18')">
+
+    <div class="col-12 my-3">
+        <h4>3. Event biding</h4>
+        <button class="btn btn-primary mt-3 mb-2" (click)="showAlert('Welcome to Angular 19')">
             Show Message
         </button>
     </div>
@@ -30,14 +30,14 @@
     </div>
 </div>
 
-<div class="row mt-4">
+<div class="row my-3">
     <div class="col-12">
         <h3>Two Way Data Binding</h3>
     </div>
 </div>
 
 
-<div class="row mt-3">
+<div class="row my-3">
     <div class="col-12">
         <input type="text" [(ngModel)]="coureseName" class="m-3"> {{coureseName}}
         <input type="checkbox" [(ngModel)]="isIndian" class="m-3">
@@ -52,13 +52,13 @@
     </div>
 </div>
 
-<div class="row mt-4">
+<div class="row my-3">
     <div class="col-12">
         <h3>Signal Data Binding</h3>
     </div>
 </div>
 
-<div class="row mt-3">
+<div class="row my-3">
     <div class="col-12">
         <h5>{{ name() }}</h5>
     </div>

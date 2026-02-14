@@ -21,7 +21,8 @@ export class AttributeDirectiveComponent {
     'background-color' : 'red',
     'color' : 'white',
     'width' : '200px',
-    'height' : '200px'
+    'height' : '100px',
+    'padding' : '6px',
   }
 
   addBlue(){

@@ -1,4 +1,4 @@
-<div class="row bg-secondary my-3 p-2">
+<div class="row my-3 p-2 bg-secondary">
     <div class="col-12 text-white">
         <h3>Pipe in Angular</h3>
         <span>Default Pipe & </span>
@@ -11,17 +11,17 @@
     <div class="col-4">
         Original Pipe - {{firstName}}
         <br>
-        After Pipe - {{firstName | uppercase}}
+        Uppercase Pipe - {{firstName | uppercase}}
     </div>
     <div class="col-4">
         Original Pipe - {{firstName}}
         <br>
-        After Pipe - {{firstName | lowercase}}
+        Lowercase Pipe - {{firstName | lowercase}}
     </div>
     <div class="col-4">
         Original Pipe - {{firstName}}
         <br>
-        After Pipe - {{firstName | titlecase}}
+        Titlecase Pipe - {{firstName | titlecase}}
     </div>
 </div>
 
@@ -29,30 +29,25 @@
     <div class="col-4">
         Original Pipe - {{currentDate}}
         <br>
-        After Pipe - {{currentDate | date}}
+        Date Pipe - {{currentDate | date}}
     </div>
     <div class="col-4">
         Original Pipe - {{currentDate | date}}
         <br>
-        After Pipe - {{currentDate | date :'dd/MMM/yyyy'}}
+        Date Pipe - {{currentDate | date :'dd/MMM/yyyy'}}
     </div>
     <div class="col-4">
         Original Pipe - {{currentDate | date}}
         <br>
-        After Pipe - {{currentDate | date: 'dd/MM/yyyy'}}
+        Date Pipe - {{currentDate | date: 'dd/MM/yyyy'}}
     </div>
 </div>
 
 <div class="row mb-5">
     <div class="col-4">
-        Original Pipe - {{currentDate | date}}
-        <br>
-        After Pipe - {{currentDate | date: 'dd-mm-yy'}}
-    </div>
-    <div class="col-4">
         Original Pipe - {{student}}
         <br>
-        json Pipe - {{student | json}}
+        JSON Pipe - {{student | json}}
     </div>
     <div class="col-4">
         Original Pipe - {{currentTime}}
@@ -63,6 +58,6 @@
     <div class="col-4">
         Original Pipe - {{student.city}}
         <br>
-        custom Pipe - {{student.city | na}}
+        Custom Pipe - {{student.city | na}}
     </div>
 </div>

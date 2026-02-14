@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular18-app": {
+    "angular19-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular18-app",
+            "outputPath": "dist/angular19-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular18-app:build:production"
+              "buildTarget": "angular19-app:build:production"
             },
             "development": {
-              "buildTarget": "angular18-app:build:development"
+              "buildTarget": "angular19-app:build:development"
             }
           },
           "defaultConfiguration": "development"

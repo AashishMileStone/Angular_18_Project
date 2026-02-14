@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,6 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular18-app';
+  title = 'angular19-app';
 
 }

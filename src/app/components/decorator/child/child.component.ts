@@ -1,5 +1,4 @@
 import { Component, Input, EventEmitter, Output} from '@angular/core';
-// import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-child',

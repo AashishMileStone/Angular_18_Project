@@ -1,13 +1,13 @@
-<div class="mt-2 p-2 bg-secondary text-white rounded">
-    <h1>ng-template</h1>
+<div class="my-3 p-2 bg-secondary text-white rounded">
+    <h3>ng-template</h3>
 </div>
-<div class="row pt-3">
+<div class="row my-3">
     <div class="col-3">
         <div class="bg-primary p-3" *ngIf="isUserLoggedIn; else notLogged">
             {{loggerUserName}}
         </div>
         <ng-template #notLogged>
-            <div class="bg-danger p-3">
+            <div class="bg-danger p-3 text-white">
                 <span>User Not Logged In</span>
             </div>
         </ng-template>

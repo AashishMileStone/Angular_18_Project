@@ -1,39 +1,34 @@
-<div class="mt-2 p-2 bg-secondary text-white rounded">
-    <h1>signal</h1>
+<div class="my-3 p-2 bg-secondary text-white rounded">
+    <h2>signal</h2>
     <p>create signal, update, display</p>
 </div>
 
 <div class="row my-3">
     <div class="col-3">
-        <h3>{{ firstName() }} - {{ course }}</h3>
+        <h5>{{ firstName() }} - {{ lastName() }}</h5>
     </div>
     <div class="col-3">
-       <h3>FullName - {{ fullName() }}</h3>
-        
+        <h5>FullName - {{ fullName() }}</h5>
     </div>
     <div class="col-3">
-         <h3>{{ cityList() }}</h3>
+        <h5>{{ cityList() }}</h5>
     </div>
-
     <div class="col-3">
-     <h3> {{ studentObj().name}} - {{studentObj().city }}</h3> 
+        <h5> {{ studentObj().name}} - {{studentObj().city }}</h5>
     </div>
-
 </div>
 
 <div class="row my-3">
     <div class="col-3">
-         <button class="btn btn-success" (click)="changeFirstName()"> Change Name</button>
+        <button class="btn btn-success" (click)="changeFirstName()"> Change First Name </button>
     </div>
     <div class="col-3">
-   <button class="btn btn-success" (click)="changeFirstName()"> Change First Name</button>
-   <button class="btn btn-success" (click)="changeLastName()"> Change Last Name</button>
-    </div>
-       <div class="col-3">
-<button class="btn btn-success" (click)="addCity()"> Add City</button>
+        <button class="btn btn-success" (click)="changeLastName()"> Change Last Name </button>
     </div>
     <div class="col-3">
-        <button class="btn btn-success" (click)="changeCity()"> Change City</button>
+        <button class="btn btn-success" (click)="addCity()"> Add City </button>
     </div>
-
+    <div class="col-3">
+        <button class="btn btn-success" (click)="changeCity()"> Change City </button>
+    </div>
 </div>

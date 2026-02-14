@@ -16,6 +16,7 @@ export class ParentComponent {
    age = 28;
 
 messageFromChild: string = '';
+parentData: any;
 
 receivedData(value: string) {
   this.messageFromChild = value;

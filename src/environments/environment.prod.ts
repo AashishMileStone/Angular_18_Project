@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  appName: 'angular18-app',
+  appName: 'angular19-app',
 //   apiUrl: 'https://api.myapp.com/api'
 };

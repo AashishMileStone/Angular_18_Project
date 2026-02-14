@@ -1,4 +1,4 @@
-<div class="row bg-secondary mb-3 p-2">
+<div class="row bg-secondary my-3 p-2">
     <div class="col-12 text-white">
         <h3>Attribute Directive</h3>
         <span>[ngClass], </span>
@@ -8,28 +8,28 @@
 
 <div class="row">
     <div class="col-3">
-        <button class="btn btn-primary mb-3" [routerLink]= "['/Structural-dir']">Go To Structural Directive </button>
+        <button class="btn btn-primary mb-3" [routerLink]="['/Structural-dir']">Go To Structural Directive </button>
     </div>
 </div>
 
 <div class="row">
     <div class="col-3">
-        <div class="p-3 text-white text-center" [ngClass]="div1BgColor">Div 1</div>
+        <h5 class="p-3 text-white text-center" [ngClass]="div1BgColor">Div 1</h5>
     </div>
     <div class="col-3">
-        <div class="p-3 text-white text-center" [ngClass]="div2Toggle ==  true ? 'bg-success' : 'bg-warning'">Div 2
-        </div>
+        <h5 class="p-3 text-white text-center" [ngClass]="div2Toggle ==  true ? 'bg-success' : 'bg-warning'">Div 2
+        </h5>
     </div>
     <div class="col-3">
-        <div class="p-3 text-white text-center"
-            [ngClass]="num1 == num2 ? 'bg-success text-white' : 'bg-danger text-yellow' ">Div 3</div>
+        <h5 class="p-3 text-white text-center"
+            [ngClass]="num1 == num2 ? 'bg-success text-white' : 'bg-danger text-yellow' ">Div 3</h5>
     </div>
     <div class="col-3">
-        <div class="p-3 text-white text-center" [ngClass]="isActive? 'bg-success' : 'bg-danger'">Div 4</div>
+        <h5 class="p-3 text-white text-center" [ngClass]="isActive? 'bg-success' : 'bg-danger'">Div 4</h5>
     </div>
 </div>
 
-<div class="row mb-5">
+<div class="row my-4">
     <div class="col-3 text-center mt-3">
         <button class="btn btn-primary" (click)="addBlue()">Add Blue</button>
         <button class="btn btn-danger mx-3" (click)="addRed()">Add Red</button>
@@ -73,7 +73,7 @@
                     <td>{{stud.City}}</td>
                     <td>{{stud.Occupation}}</td>
                     <td>{{stud.Gender}}</td>
-                    <td [ngStyle]="{'background-color': stud.isActive? 'yellow' : 'red'}">{{stud.isActive? 'Active' :
+                    <td [ngStyle]="{'background-color': stud.isActive? 'green' : 'blue', 'color': stud.isActive? 'white' : 'white'}">{{stud.isActive? 'Active' :
                         'De-Active'}}</td>
                     <td>
                         <div class="progress">
@@ -87,11 +87,10 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row my-4">
     <div class="col-4">
-        <div [ngStyle]="divDynamicStyleAdd">
-Test
-        </div>
+        <p [ngStyle]="divDynamicStyleAdd">
+            Test
+        </p>
     </div>
 </div>
-

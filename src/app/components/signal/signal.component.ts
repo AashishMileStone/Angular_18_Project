@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-signal',
@@ -12,7 +12,13 @@ export class SignalComponent {
 
   firstName = signal("Aashish");
   lastName = signal("Kumar");
-  fullName = computed(() => this.firstName() + "" + this.lastName());
+  fullName = computed(() => this.firstName() + " " + this.lastName());
+
+  fullNameeffect = effect(() => {
+  console.log(this.fullName());
+});
+
+  
   course: string = "HTML5";
 
   cityList = signal(['Noida', 'Pune']);
@@ -30,7 +36,7 @@ export class SignalComponent {
     setTimeout(() => {
       // this.firstName.set('React');
       this.course = "Phyton"
-    }, 5000);
+    }, 1000);
   }
 
   // changeSignalName(){

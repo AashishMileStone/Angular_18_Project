@@ -27,6 +27,7 @@ export class LoginComponent {
 
       // Store in localStorage so all tabs see it
       localStorage.setItem('loginUser', this.userObj.userName);
+      localStorage.setItem('isLoggedIn', 'true');
 
       // Mark session active in this tab
       sessionStorage.setItem('sessionActive', 'true');

@@ -1,20 +1,17 @@
 
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-for',
   standalone: true,
-  imports: [RouterLink, FormsModule],
+  imports: [FormsModule],
   templateUrl: './for.component.html',
   styleUrl: './for.component.css'
 })
 export  class ForComponent {
 
 cityArray : string [] = ['Noida', 'Goa', 'pune', 'bihar' ];
-dayNumber : string = '';
-
 
    studentList : any[] = [
     {id: 1, Gender : 'Male', Name: 'Ashish', City: 'Muzaffarnagar',  Occupation: 'Sr. UI Developer', isActive: false},
